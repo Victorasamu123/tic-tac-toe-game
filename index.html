@@ -8,23 +8,26 @@
 </head>
 <body>
     <h1 align="center">Tic-Tac-Toe</h1>
-    <table border="2" style="height: 200px; width: 200px;"> 
+    <div id="winning"></div>
+    <table border="2" style="height: 200px; width: 200px;" align="center"> 
         <tr>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
+            <td onclick="test(event)"  id="one"></td>
+            <td onclick="test(event)" id="two"></td>
+            <td onclick="test(event)" id="three"></td>
         </tr>
         <tr>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
+            <td onclick="test(event)" id="four"></td>
+            <td onclick="test(event)" id="five"></td>
+            <td onclick="test(event)" id="six"></td>
         </tr>
         <tr>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
-            <td onclick="test(event)"></td>
+            <td onclick="test(event)" id="seven"></td>
+            <td onclick="test(event)" id="eight"></td>
+            <td onclick="test(event)" id="nine"></td>
         </tr>
     </table>
+    <button onclick="start()">start</button>
+    <button onclick="restart()">re-start</button>
     <script src="tic.js"></script>
 </body>
 </html>
