@@ -18,6 +18,10 @@ let info = document.getElementById("information");
 // let noInput = document.getElementById("inputno").value;
 // let firstInput = document.getElementById("inputno").value;
 // let secondInput = document.getElementById("inputtwo").value;
+let audi = document.getElementById("playMe");
+let pla = ()=>{
+    audi.play();
+}
 const start = ()=>{
     let firstInput = document.getElementById("inputno").value;
     let secondInput = document.getElementById("inputtwo").value;
@@ -98,19 +102,6 @@ const test = (e) =>{
         win.innerText="CLick on start button for game to start";
     info.innerHTML = "!!!!!!!!!!!!!!!!"
     }
-}
-let audi = document.getElementById("playMe");
-let pla = ()=>{
-    audi.play();
-     if(audi.play()){
-        document.getElementById("button").innerHTML="pause"
-    }else if(document.getElementById("button").innerHTML==="pause"){
-        document.getElementById("button").innerHTML="play"
-        alert("jfjfjgjjohphrtkphbioert")
-    }
-}
-let pau=()=>{
-    audi.pause()
 }
 const restart = ()=>{
     let firstInput = document.getElementById("inputno").value;
