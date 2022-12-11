@@ -62,22 +62,38 @@ const test = (e) =>{
         //condition for if x wins and o wins
         if ((a=="X" && b=="X" && c=="X") || (d=="X" && k=="X" && f=="X") || (g=="X" && h=="X" && i=="X") || (a=="X" && d=="X" && g=="X") || (b=="X" && k=="X" && h=="X") || (c=="X" && f=="X" && i=="X") || (a=="X" && k=="X" && i=="X") || (c=="X" && k=="X" && g=="X")) {
             console.log("ose")
-            initialValue =" " ;
+            initialValue ="O" ;
             info.innerHTML = "there is a winner pls press the continue button"
             win.innerText = `${firstInput} is the winner`
             ++firstScore.innerHTML
         }else if ((a=="O" && b=="O" && c=="O") || (d=="O" && k=="O" && f=="O") || (g=="O" && h=="O" && i=="O") || (a=="O" && d=="O" && g=="O") || (b=="O" && k=="O" && h=="O") || (c=="O" && f=="O" && i=="O") || (a=="O" && k=="O" && i=="O") || (c=="O" && k=="O" && g=="O")) {
             console.log("ose")
-            initialValue =" " ;
+            initialValue ="X" ;
             info.innerHTML = "there is a winner pls press the continue button"
             win.innerText = `${secondInput} is the winner`
             ++secondScore.innerHTML
         }else if(a!="" && b!="" &&  c!="" &&  d!="" && k!="" && f!="" && g!="" &&  h!="" && i!=""){
-            info.innerHTML = "oops no winner"
+            info.innerHTML = "oops"
             win.innerText = `it a draw`
         }
         
-        
+        // if (info.innerHTML == "there is a winner pls press the continue button") {
+        //     info.innerHTML = "there is a winner already pls proceed"
+        //     e.target.innerText = "X";
+        // }
+        //condition to disable after winning
+        // if((a=="X" && b=="X" && c=="X") || (d=="X" && k=="X" && f=="X") || (g=="X" && h=="X" && i=="X") || (a=="X" && d=="X" && g=="X") || (b=="X" && k=="X" && h=="X") || (c=="X" && f=="X" && i=="X") || (a=="X" && k=="X" && i=="X") || (c=="X" && k=="X" && g=="X")){
+        //     disable()
+           
+        // }
+        // if ((a=="X" && b=="X" && c=="X") || (d=="X" && k=="X" && f=="X") || (g=="X" && h=="X" && i=="X") || (a=="X" && d=="X" && g=="X") || (b=="X" && k=="X" && h=="X") || (c=="X" && f=="X" && i=="X") || (a=="X" && k=="X" && i=="X") || (c=="X" && k=="X" && g=="X") && (a=="O" && b=="O" && c=="O") || (d=="O" && k=="O" && f=="O") || (g=="O" && h=="O" && i=="O") || (a=="O" && d=="O" && g=="O") || (b=="O" && k=="O" && h=="O") || (c=="O" && f=="O" && i=="O") || (a=="O" && k=="O" && i=="O") || (c=="O" && k=="O" && g=="O")) {
+        //     info.innerHTML = "oops draw pls press the continue button"
+        //     win.innerText = " play"
+        // }
+        // console.log(e.target.id);
+    
+       
+        // else{console.log("noono")}
     }else{
         win.innerText="CLick on start button for game to start";
     info.innerHTML = "!!!!!!!!!!!!!!!!"
@@ -86,28 +102,37 @@ const test = (e) =>{
 let audi = document.getElementById("playMe");
 let pla = ()=>{
     audi.play();
+     if(audi.play()){
+        document.getElementById("button").innerHTML="pause"
+    }else if(document.getElementById("button").innerHTML==="pause"){
+        document.getElementById("button").innerHTML="play"
+        alert("jfjfjgjjohphrtkphbioert")
+    }
+}
+let pau=()=>{
+    audi.pause()
 }
 const restart = ()=>{
     let firstInput = document.getElementById("inputno").value;
     let secondInput = document.getElementById("inputtwo").value;
-    if(firstInput !="" && secondInput !=""){
-        firstTd.innerHTML = "";
-        secondTd.innerHTML = "";
-        thirdTd.innerHTML = "";
-        fourthTd.innerHTML = "";
-        fifthTd.innerHTML = "";
-        sixTd.innerHTML = "";
-        sevenTd.innerHTML = "";
-        eightTd.innerHTML = "";
-        nineTd.innerHTML = "";
-        win.innerText="next player turn";
-        info.innerHTML = "This is another game goodluck"
+    if(firstInput != ""&& secondInput !=""){
+    firstTd.innerHTML = "";
+    secondTd.innerHTML = "";
+    thirdTd.innerHTML = "";
+    fourthTd.innerHTML = "";
+    fifthTd.innerHTML = "";
+    sixTd.innerHTML = "";
+    sevenTd.innerHTML = "";
+    eightTd.innerHTML = "";
+    nineTd.innerHTML = "";
+    win.innerText="next player turn";
+    info.innerHTML = "This is another game goodluck"
     }else{
         info.innerHTML = "please input a correct name "
         win.innerText = "input name to play"
     }
-}
 
+}
 let cont =()=>{
     location.reload();
 }
